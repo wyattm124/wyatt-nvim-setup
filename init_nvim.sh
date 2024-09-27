@@ -4,7 +4,7 @@ if ! command -v nvim &> /dev/null
 then
 	sudo apt-get update
   # if want the latest versions of fd and rg, would need arch dep package or build from source
-	sudo apt-get install gettext libgettextpo-dev ripgrep fd-find
+	sudo apt-get install gettext libgettextpo-dev ripgrep fd-find tmux
 
 	git submodule update --init --recursive
 	cd neovim
