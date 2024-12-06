@@ -3,7 +3,8 @@ local lsp_zero = require('lsp-zero')
 local lsp_attach = function(client, bufnr)
 	-- this is where features are enabled that are only possible if a language server
 	-- is attached to the file
-	local opts = {buffer = bufnr}                                                                                  vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
+	local opts = {buffer = bufnr}
+  vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
 	vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
 	vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
 	vim.keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>', opts)
@@ -22,6 +23,7 @@ lsp_zero.extend_lspconfig({
 })
 
 require('lspconfig').clangd.setup({})
+require('lspconfig').futhark_lsp.setup({})
 
 local cmp = require('cmp')
 cmp.setup({
@@ -36,7 +38,7 @@ cmp.setup({
 	mapping = cmp.mapping.preset.insert({
         	['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
         	['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-                ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-                ["<C-Space>"] = cmp.mapping.complete(),
+          ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+          ["<C-Space>"] = cmp.mapping.complete(),
         }),
 })
