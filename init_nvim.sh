@@ -13,6 +13,6 @@ then
   #For a different location use CMAKE_INSTALL_PREFIX=/usr/local/
 	sudo make install
 	cd ..
-  sudo ln ~/.config/wyatt-nvim-setup/tmux ~/.config/tmux
-  sudo ln ~/.config/wyatt-nvim-setup ~/.config/nvim
+  ln ~/.config/wyatt-nvim-setup/tmux ~/.config/tmux
+  ln ~/.config/wyatt-nvim-setup ~/.config/nvim
 fi
