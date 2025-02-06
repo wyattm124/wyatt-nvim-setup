@@ -1,6 +1,3 @@
 [submodule "neovim"]
 	path = neovim
 	url = git@github.com:neovim/neovim.git
-[submodule "tmux/plugins/tpm"]
-	path = tmux/plugins/tpm
-	url = git@github.com:tmux-plugins/tpm.git

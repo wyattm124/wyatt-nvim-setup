@@ -7,7 +7,7 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
-vim.g.clipboard = {
+--[[vim.g.clipboard = {
   name = 'tmuxClipboard',
   copy = {
     ["+"] = {'tmux', 'load-buffer', '-'},
@@ -18,6 +18,6 @@ vim.g.clipboard = {
     ["*"] = {'tmux', 'save-buffer', '-'},
   },
   cache_enabled = true,
-}
+}--]]
 
 vim.opt.clipboard = 'unnamedplus'
